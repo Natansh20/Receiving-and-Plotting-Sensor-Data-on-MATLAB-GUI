@@ -1,2 +1,6 @@
 # Receiving-and-Plotting-Sensor-Data-on-MATLAB-GUI
-The project is utilising a photoresistor to sense the intensity of light in a room and plot the results on the MATLAB GUI.
+The project is utilising a photoresistor to sense the intensity of light in a room and plot the results on the MATLAB GUI. Since photo resistors change resistance in response to ambient light in the room, they are light sensitive devices. As the light on the photo-resistor increases, so does its resistance, and vice versa.
+We can feed a voltage that varies with the intensity of light in the room into the Arduino board analogue input if we connect the photoresistor to a fixed resistance in a voltage divider circuit. The program constantly reads the sensor value at an analog pin and simultaneously prints it to the serial COM port. The MATLAB GUI receives the corresponding value every time the sensor value is printed. As a result, the value is plotted on the GUI axes.
+
+We are using the MATLAB GUI to control the Arduino board (Graphic User Interface). For serial communication between MATLAB and the Arduino board, the USB COM port is used as the standard interface. The Arduino board must always be connected to a USB port in order for this project to function properly. 
+The sensor records the reading and sends it to the arduino board's analogue pin. This data is then serially communicated to MATLAB, where it is first converted to integer form and then plotted on the designed graph for the specified duration.
